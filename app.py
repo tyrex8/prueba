@@ -33,17 +33,19 @@ def webhook():
 
 def processRequest(req):
 	if req.get("result").get("action") == "Posicion":
-		res = makeWebhookResult()
+		speech = "Tienes 4 cajeros cerca de tu posicion"
+		res = makeWebhookResult(speech)
+		return res
+	elif req.get("result").get("action") == "Gastos":
+		speech = "HAs gastado X €"
+		res = makeWebhookResult(speech)
 		return res
 	else:
 		return {}
 
 
 
-def makeWebhookResult():
-
-    speech = "Tienes 4 cajeros cerca de tu posicion"
-	
+def makeWebhookResult(speech):
     print("Response:")
     print(speech)
 
