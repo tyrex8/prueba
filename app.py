@@ -35,7 +35,8 @@ def processRequest(req):
     if req.get("result").get("action") == "Posicion":
 			res = makeWebhookResult()
 			return res
-	else: return {}
+	else: 
+		return {}
 
 
 
