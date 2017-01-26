@@ -37,7 +37,7 @@ def processRequest(req):
 		res = makeWebhookResult(speech)
 		return res
 	elif req.get("result").get("action") == "Gastos":
-		speech = "HAs gastado X €"
+		speech = "Has gastado X Euros"
 		res = makeWebhookResult(speech)
 		return res
 	else:
