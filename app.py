@@ -32,10 +32,10 @@ def webhook():
 
 
 def processRequest(req):
-    if req.get("result").get("action") == "Posicion":
-			res = makeWebhookResult()
-			return res
-	else: 
+	if req.get("result").get("action") == "Posicion":
+		res = makeWebhookResult()
+		return res
+	else:
 		return {}
 
 
